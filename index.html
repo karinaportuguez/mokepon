@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mokepon</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Pantalla de inicio -->
+  <section id="start-screen">
+    <h1 class="logo">MOKEPON</h1>
+    <div class="start-buttons">
+      <button id="btn-play">JUGAR</button>
+      <button id="btn-tutorial">TUTORIAL</button>
+      <button id="btn-settings">AJUSTES</button>
+      <button id="btn-credits">CRÉDITOS</button>
+    </div>
+  </section>
+
+  <!-- Pantalla de selección -->
+  <section id="selection-screen">
+    <h1>Elige tu Mokepon</h1>
+    <div class="mokepon-list">
+      <div class="mokepon-card" data-name="Ignis" data-type="fuego">
+        <img src="assets/ignis.png" alt="Ignis" />
+        <p>Ignis (Fuego)</p>
+      </div>
+      <div class="mokepon-card" data-name="Aqua" data-type="agua">
+        <img src="assets/aqua.png" alt="Aqua" />
+        <p>Aqua (Agua)</p>
+      </div>
+      <div class="mokepon-card" data-name="Terra" data-type="tierra">
+        <img src="assets/terra.png" alt="Terra" />
+        <p>Terra (Tierra)</p>
+      </div>
+      <div class="mokepon-card" data-name="Zephyr" data-type="aire">
+        <img src="assets/zephyr.png" alt="Zephyr" />
+        <p>Zephyr (Aire)</p>
+      </div>
+    </div>
+    <button id="confirm-selection" disabled>Confirmar</button>
+  </section>
+
+  <!-- Pantalla de combate -->
+  <section id="battle-screen" class="hidden">
+    <h2>Combate</h2>
+    <div class="battlefield">
+      <div class="mokepon-info">
+        <h3>Enemigo: <span id="enemy-name"></span></h3>
+        <div class="health-bar">
+          <div id="enemy-health"></div>
+        </div>
+        <img id="enemy-img" src="" alt="Enemigo" />
+      </div>
+      <div class="mokepon-info">
+        <h3>Tu Mokepon: <span id="player-name"></span></h3>
+        <div class="health-bar">
+          <div id="player-health"></div>
+        </div>
+        <img id="player-img" src="" alt="Player" />
+      </div>
+    </div>
+    <div class="actions">
+      <button data-move="basic">Ataque básico</button>
+      <button data-move="special">Ataque especial</button>
+    </div>
+    <div id="log"></div>
+    <button id="restart" class="hidden">Volver a jugar</button>
+  </section>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>
